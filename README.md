@@ -126,8 +126,6 @@ Who the hell knows!  The world is your oyster.
 No... `$signal->create($handler)` does not return the resolved handler.  Rather, it merely tracks the `$handler` and returns a proxy callback in its place, so the handler isn't resolved until it actually needs to be.  See the one test it has:
 
 ```php
-<?php
-
 class SignalTest extends PHPUnit\Framework\TestCase
 {
 	public function testProxy()
