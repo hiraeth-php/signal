@@ -1,10 +1,6 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-
-use Hiraeth\Utils\Signal;
-
-class SignalTest extends TestCase
+class SignalTest extends PHPUnit\Framework\TestCase
 {
 	public function testProxy()
 	{
@@ -13,7 +9,7 @@ class SignalTest extends TestCase
 		// resolver that always returns the same callback.
 		//
 
-		$signal = new Signal(function($signal) use (&$target) {
+		$signal = new Hiraeth\Utils\Signal(function($signal) use (&$target) {
 			$this->assertSame($signal, 'fake_signal');
 
 			return $target = new class {

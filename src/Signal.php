@@ -5,7 +5,8 @@ namespace Hiraeth\Utils;
 use Closure;
 
 /**
- * A generic callback wrapper which enables lazy DI resolution
+ * Signal is a generic callback wrapper / proxy which enables custom resolution, including lazy
+ * instantiation and dependency injection in places where it might not otherwise be supported.
  */
 class Signal
 {
