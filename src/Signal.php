@@ -3,6 +3,7 @@
 namespace Hiraeth\Utils;
 
 use Closure;
+use RuntimeException;
 
 /**
  * Signal is a generic callback wrapper / proxy which enables custom resolution, including lazy
