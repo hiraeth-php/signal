@@ -1,6 +1,6 @@
 {
     "name": "hiraeth/signal",
-    "description": "A genreic callback wrapper which enables lazy DI resolution",
+    "description": "A generic callback wrapper which enables lazy DI instantiation",
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "^7.4"
