@@ -56,7 +56,7 @@ OK, that's not so bad, but now you're kind of assuming your handlers will always
 
 ## Is There a Better Way?
 
-Yes!  **ONE CALLBACK (RESOLVER) TO RULE THEM ALL!**  Though technically it doesn't need to be a callback:
+Yes!  **ONE CALLBACK (RESOLVER) TO RULE THEM ALL!**
 
 ```php
 $signal = new Hiraeth\Utils\Signal(function($signal) use ($container) {

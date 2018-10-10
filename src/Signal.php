@@ -89,7 +89,7 @@ class Signal
 		if (!is_callable($this->targets[$signal_number])) {
 			throw new RuntimeException(sprintf(
 				'Resolver failed to convert signal "%s" to callable target.',
-				print_r($this->signals[$signal_number], TRUE)
+				str_replace("\n", '', print_r($this->signals[$signal_number], TRUE))
 			));
 		}
 
