@@ -181,5 +181,5 @@ class SignalTest extends PHPUnit\Framework\TestCase
 ## Run The Test Yourself
 
 ```
-php vendor/bin/phpunit --bootstrap vendor/autoload.php tests/SignalTest
+php vendor/bin/phpunit --bootstrap vendor/autoload.php test/routines
 ```
