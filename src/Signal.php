@@ -75,6 +75,16 @@ class Signal
 
 
 	/**
+	 *
+	 * @param mixed $signal The signal to be resolved by the registered resolver
+	 */
+	public function resolve($signal)
+	{
+		return ($this->resolver)($signal);
+	}
+
+
+	/**
  	 * Proxy a call to a registered signal, resolving if necessary
 	 *
 	 * @access protected
@@ -84,7 +94,7 @@ class Signal
 	 */
 	protected function proxy($signal_number, ...$params)
 	{
-		$this->targets[$signal_number] = ($this->resolver)($this->signals[$signal_number]);
+		$this->targets[$signal_number] = $this->resolve($this->signals[$signal_number]);
 
 		if (!is_callable($this->targets[$signal_number])) {
 			throw new RuntimeException(sprintf(
