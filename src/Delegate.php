@@ -44,7 +44,7 @@ class Delegate implements Hiraeth\Delegate
 	 */
 	public function __invoke(Hiraeth\Broker $broker): object
 	{
-		$signal = new Hiraeth\Utils\Signal($broker->make('Hiraeth\Utils\Signal\Resolver'));
+		$signal = new Hiraeth\Utils\Signal($broker->make(ResolverInterface::class));
 
 		$broker->share($signal);
 

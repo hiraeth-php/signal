@@ -14,5 +14,13 @@
     ],
     "autoload": {
         "classmap": ["src/"]
+    },
+    "type": "opus-package",
+    "extra": {
+        "opus": {
+            "hiraeth/app": {
+                "config": ""
+            }
+        }
     }
 }
