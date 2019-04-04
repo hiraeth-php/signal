@@ -23,31 +23,16 @@ class Delegate implements Hiraeth\Delegate
 
 
 	/**
-	 * Construct the delegate
-	 *
-	 * @access public
-	 * @param Hiraeth\Application $app An application instance
-	 * @return void
-	 */
-	public function __construct(Hiraeth\Application $app)
-	{
-		$this->app = $app;
-	}
-
-
-	/**
 	 * Get the instance of the class for which the delegate operates.
 	 *
 	 * @access public
-	 * @param Hiraeth\Broker $broker The dependency injector instance
+	 * @param Hiraeth\Application $app The application instance for which the delegate operates
 	 * @return object The instance of the class for which the delegate operates
 	 */
-	public function __invoke(Hiraeth\Broker $broker): object
+	public function __invoke(Hiraeth\Application $app): object
 	{
-		$signal = new Hiraeth\Utils\Signal($broker->make(ResolverInterface::class));
+		$signal = new Hiraeth\Utils\Signal($app->get(ResolverInterface::class));
 
-		$broker->share($signal);
-
-		return $signal;
+		return $app->share($signal);
 	}
 }
