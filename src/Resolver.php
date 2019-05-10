@@ -12,9 +12,9 @@ class Resolver
 	/**
 	 *
 	 */
-	public function __construct(Hiraeth\Broker $broker)
+	public function __construct(Hiraeth\Application $app)
 	{
-		$this->broker = $broker;
+		$this->app = $app;
 	}
 
 
@@ -24,7 +24,7 @@ class Resolver
 	public function __invoke($signal)
 	{
 		$handler    = explode('::', $signal);
-		$handler[0] = $this->broker->make($handler[0]);
+		$handler[0] = $this->app->get($handler[0]);
 		$handler[1] = $handler[1] ?? '__invoke';
 
 		return $handler;
