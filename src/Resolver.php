@@ -3,6 +3,7 @@
 namespace Hiraeth\Utils\Signal;
 
 use Hiraeth;
+use Psr\Container\ContainerInterface as Container;
 
 /**
  *
@@ -12,19 +13,24 @@ class Resolver
 	/**
 	 *
 	 */
-	public function __construct(Hiraeth\Application $app)
+	protected $container = NULL;
+
+	/**
+	 *
+	 */
+	public function __construct(Container $container)
 	{
-		$this->app = $app;
+		$this->container = $container;
 	}
 
 
 	/**
 	 *
 	 */
-	public function __invoke($signal)
+	public function __invoke($signal): callable
 	{
 		$handler    = explode('::', $signal);
-		$handler[0] = $this->app->get($handler[0]);
+		$handler[0] = $this->container->get($handler[0]);
 		$handler[1] = $handler[1] ?? '__invoke';
 
 		return $handler;

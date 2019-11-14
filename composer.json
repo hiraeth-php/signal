@@ -1,16 +1,21 @@
 {
     "name": "hiraeth/signal",
     "description": "A generic callback wrapper which enables lazy DI instantiation",
-    "require-dev": {
-        "phpunit/phpunit": "^7.4"
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
     "authors": [
         {
-            "name": "Matthew J. Sahagian",
-            "email": "matthew.sahagian@gmail.com"
+            "name":  "Matthew J. Sahagian",
+            "email": "matthew.sahagian@gmail.com",
+            "role":  "Lead Architect / Developer"
         }
     ],
+    "require-dev": {
+        "hiraeth/app": "^2.0",
+        "phpstan/phpstan": "^0.11.19",
+        "phpunit/phpunit": "^7.4"
+    },
     "autoload": {
         "classmap": ["src/"]
     },
@@ -21,5 +26,8 @@
                 "config": ""
             }
         }
+    },
+    "require": {
+        "psr/container": "^1.0"
     }
 }

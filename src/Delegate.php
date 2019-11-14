@@ -31,7 +31,7 @@ class Delegate implements Hiraeth\Delegate
 	 */
 	public function __invoke(Hiraeth\Application $app): object
 	{
-		$signal = new Hiraeth\Utils\Signal($app->get(ResolverInterface::class));
+		$signal = new Hiraeth\Utils\Signal($app->get(Resolver::class));
 
 		return $app->share($signal);
 	}

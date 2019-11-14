@@ -15,7 +15,7 @@ class Signal
 	 * The callable responsible for resolving signals into valid callables
 	 *
 	 * @access protected
-	 * @var callable
+	 * @var callable|null
 	 */
 	protected $resolver = NULL;
 
@@ -42,7 +42,7 @@ class Signal
  	 * Create a new instance
 	 *
 	 * @access public
-	 * @param callable $resovler The resolver to resolve signals to callable targets
+	 * @param callable $resolver The resolver to resolve signals to callable targets
 	 * @return void
 	 */
 	public function __construct(callable $resolver)
@@ -89,7 +89,7 @@ class Signal
 	 *
 	 * @access protected
 	 * @param integer $signal_number The signal number of the signal to proxy to and resolve
-	 * @param mixed $params ...the parameters as passed to the proxy callback
+	 * @param mixed ...$params The parameters as passed to the proxy callback
 	 * @return mixed The return from the signal's resolved target
 	 */
 	protected function proxy($signal_number, ...$params)

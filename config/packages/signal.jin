@@ -7,7 +7,7 @@
 	;
 
 	aliases = {
-		"Hiraeth\Utils\Signal\ResolverInterface": "Hiraeth\Utils\Signal\Resolver"
+
 	}
 
 	;
