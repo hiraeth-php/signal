@@ -11,6 +11,9 @@
             "role":  "Lead Architect / Developer"
         }
     ],
+    "require": {
+        "psr/container": "^1.0"
+    },
     "require-dev": {
         "hiraeth/app": "^2.0",
         "phpstan/phpstan": "^0.11.19",
@@ -26,8 +29,5 @@
                 "config": ""
             }
         }
-    },
-    "require": {
-        "psr/container": "^1.0"
     }
 }
