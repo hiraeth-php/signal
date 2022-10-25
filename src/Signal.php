@@ -24,7 +24,7 @@ class Signal
 	 * An array of registered signals (potential callbacks to resolve)
 	 *
 	 * @access protected
-	 * @var array
+	 * @var callable[]
 	 */
 	protected $signals = array();
 
@@ -33,7 +33,7 @@ class Signal
 	 * An array of resolved signals
 	 *
 	 * @access protected
-	 * @var array
+	 * @var callable[]
 	 */
 	protected $targets = array();
 
@@ -78,7 +78,7 @@ class Signal
 	 *
 	 * @param mixed $signal The signal to be resolved by the registered resolver
 	 */
-	public function resolve($signal)
+	public function resolve($signal): callable
 	{
 		return ($this->resolver)($signal);
 	}

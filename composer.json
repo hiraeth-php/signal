@@ -11,16 +11,16 @@
             "role":  "Lead Architect / Developer"
         }
     ],
+    "autoload": {
+        "classmap": ["src/"]
+    },
     "require": {
         "psr/container": "^1.0"
     },
     "require-dev": {
         "hiraeth/app": "^2.0",
-        "phpstan/phpstan": "^0.11.19",
-        "phpunit/phpunit": "^7.4"
-    },
-    "autoload": {
-        "classmap": ["src/"]
+        "phpstan/phpstan": "^1.0",
+        "phpunit/phpunit": "^8.5"
     },
     "type": "opus-package",
     "extra": {
@@ -28,6 +28,11 @@
             "hiraeth/app": {
                 "config": ""
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "imarc/opus": true
         }
     }
 }
