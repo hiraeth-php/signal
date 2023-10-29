@@ -15,12 +15,12 @@
         "classmap": ["src/"]
     },
     "require": {
-        "psr/container": "^1.0"
+        "hiraeth/app": "^3.0",
+        "psr/container": "^2.0"
     },
     "require-dev": {
-        "hiraeth/app": "^2.0",
         "phpstan/phpstan": "^1.0",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^10.0"
     },
     "type": "opus-package",
     "extra": {
