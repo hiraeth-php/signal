@@ -15,10 +15,10 @@
         "classmap": ["src/"]
     },
     "require": {
+        "hiraeth/app": "^2.0",
         "psr/container": "^1.0"
     },
     "require-dev": {
-        "hiraeth/app": "^2.0",
         "phpstan/phpstan": "^1.0",
         "phpunit/phpunit": "^8.5"
     },
